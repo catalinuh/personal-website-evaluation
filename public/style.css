@@ -339,3 +339,22 @@ textarea {
 } */
 
 /* My CSS */
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+}
+
+.logo {
+  margin-right: auto;
+  padding-left: 10px;
+}
+
+.primary-nav {
+  align-self: flex-end;
+}
+
+a {
+  text-decoration: none;
+}
