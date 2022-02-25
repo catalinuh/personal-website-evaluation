@@ -1,5 +1,5 @@
 import AboutMe from './AboutMe';
-import Contact from './Contact';
+import ContactInfo from './ContactInfo';
 import Footer from './Footer';
 import Header from './Header';
 import Hero from './Hero';
@@ -8,7 +8,7 @@ import Summary from './Summary';
 
 export {
   AboutMe,
-  Contact,
+  ContactInfo,
   Footer,
   Header,
   Hero,

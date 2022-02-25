@@ -1,5 +1,11 @@
+import { ProjectsAndPortfolios } from '../components';
+
 const Portfolio = () => {
-  return <div>Portfolio</div>;
+  return (
+    <div>
+      <ProjectsAndPortfolios />
+    </div>
+  );
 };
 
 export default Portfolio;

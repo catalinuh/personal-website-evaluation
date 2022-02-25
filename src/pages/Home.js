@@ -3,7 +3,7 @@ import {
   AboutMe,
   Summary,
   ProjectsAndPortfolios,
-  Contact,
+  ContactInfo,
   Footer,
 } from '../components';
 
@@ -13,6 +13,8 @@ const Home = () => {
       <Hero />
       <AboutMe />
       <Summary />
+      <ProjectsAndPortfolios />
+      <ContactInfo />
     </div>
   );
 };
