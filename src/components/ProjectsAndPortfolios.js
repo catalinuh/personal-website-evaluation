@@ -18,7 +18,7 @@ const ProjectsAndPortfolios = () => {
           </div>
         </div>
 
-        <div className="row">
+        <div className="row" id="project-row">
           <div className="col-sm-4 col-md-4 text-center">
             <div className="luvtalk-project">
               <h3>LUV TALK Website</h3>

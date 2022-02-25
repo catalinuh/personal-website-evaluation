@@ -19,6 +19,7 @@ html {
   padding-right: 50px;
 }
 .primary-nav li {
+  text-decoration: none;
   display: inline-block;
   margin: 0px 20px;
   color: white;
@@ -26,6 +27,7 @@ html {
 }
 
 .primary-nav a {
+  text-decoration: none;
   color: white;
   padding-bottom: 5px;
   -webkit-transition: border 50ms linear;
@@ -337,3 +339,75 @@ textarea {
 .resume-footer a:hover,
 .contact-footer a:hover {
 } */
+
+#project-row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#project-row.row {
+  align-items: center;
+}
+
+img.img-responsive {
+  width: 26px;
+}
+
+.media-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.col-sm-4.col-md-4.col-sm-offset-4.col-md-offset-4 {
+  margin: 0 auto;
+}
+
+ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+li {
+  text-decoration: none;
+}
+
+/* .btn.btn-default.btn-border {
+  margin: 0 auto;
+} */
+
+@media (max-width: 800px) {
+  #project-row {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .contact-form-body {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  div.col-sm-4 {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .btn.btn-default.btn-border {
+    width: 100%;
+  }
+
+  img.img-responsive {
+    width: 200px;
+  }
+}
+
+.summary.container-fluid {
+  display: flex;
+  flex-flow: row wrap;
+}
