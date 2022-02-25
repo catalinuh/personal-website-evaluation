@@ -60,20 +60,22 @@ const Summary = () => {
       </div>
 
       <div className="passion-summary">
-        <img
-          className="img-responsive"
-          src="./images/passion.svg"
-          alt="heart that is on fire"
-        />
-      </div>
+        <div className="passion-img">
+          <img
+            className="img-responsive"
+            src="./images/passion.svg"
+            alt="heart that is on fire"
+          />
+        </div>
 
-      <div className="passion-description">
-        <h3>Passion and Dedication</h3>
-        <p>
-          With my profound interest and commitment to my field of study, my
-          projects rarely go unfinished and my problems are never left
-          unresolved.
-        </p>
+        <div className="passion-description">
+          <h3>Passion and Dedication</h3>
+          <p>
+            With my profound interest and commitment to my field of study, my
+            projects rarely go unfinished and my problems are never left
+            unresolved.
+          </p>
+        </div>
       </div>
     </div>
   );

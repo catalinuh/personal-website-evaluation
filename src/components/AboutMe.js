@@ -9,8 +9,9 @@ const AboutMe = () => {
         <h3>Sharing a little bit of my story...</h3>
       </div>
 
-      <div className="about-general-description ">
+      <div className="about-general-description">
         <h2>General Overview</h2>
+
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever

@@ -3,7 +3,7 @@ import ContactInfo from './ContactInfo';
 import Footer from './Footer';
 import Header from './Header';
 import Hero from './Hero';
-import ProjectsAndPortfolios from './ProjectsAndPortfolios';
+import ProjectsAndPortfolio from './ProjectsAndPortfolio';
 import Summary from './Summary';
 
 export {
@@ -12,6 +12,6 @@ export {
   Footer,
   Header,
   Hero,
-  ProjectsAndPortfolios,
+  ProjectsAndPortfolio,
   Summary,
 };

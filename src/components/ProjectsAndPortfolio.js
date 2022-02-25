@@ -1,4 +1,4 @@
-const ProjectsAndPortfolios = () => {
+const ProjectsAndPortfolio = () => {
   return (
     <div className="projects" id="projects">
       <div className="projects-header">
@@ -59,4 +59,4 @@ const ProjectsAndPortfolios = () => {
   );
 };
 
-export default ProjectsAndPortfolios;
+export default ProjectsAndPortfolio;

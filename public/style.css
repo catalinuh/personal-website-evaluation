@@ -115,6 +115,7 @@ html {
 .about-general-description,
 .about-statistic-description {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 .about-general-description h2,
@@ -338,8 +339,7 @@ textarea {
 .contact-footer a:hover {
 } */
 
-/* My CSS */
-
+/* Header */
 .navigation {
   display: flex;
   justify-content: flex-end;
@@ -358,3 +358,33 @@ textarea {
 a {
   text-decoration: none;
 }
+
+/* Hero */
+
+/* About Me */
+.about#about {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.about-option-buttons {
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .about-option-buttons {
+    width: 100%;
+  }
+}
+
+/* Summary */
+
+.summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 60px;
+}
+
+/* Projects and Portfolio */
