@@ -4,7 +4,7 @@ import Footer from './Footer';
 import Header from './Header';
 import Hero from './Hero';
 import ProjectsAndPortfolios from './ProjectsAndPortfolios';
-import Skills from './Skills';
+import Summary from './Summary';
 
 export {
   AboutMe,
@@ -13,5 +13,5 @@ export {
   Header,
   Hero,
   ProjectsAndPortfolios,
-  Skills,
+  Summary,
 };

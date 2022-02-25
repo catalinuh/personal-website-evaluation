@@ -1,7 +1,7 @@
 import {
   Hero,
   AboutMe,
-  Skills,
+  Summary,
   ProjectsAndPortfolios,
   Contact,
   Footer,
@@ -12,6 +12,7 @@ const Home = () => {
     <div>
       <Hero />
       <AboutMe />
+      <Summary />
     </div>
   );
 };
