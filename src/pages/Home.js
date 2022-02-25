@@ -1,5 +1,4 @@
 import {
-  Header,
   Hero,
   AboutMe,
   Skills,
@@ -9,7 +8,12 @@ import {
 } from '../components';
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Hero />
+      <AboutMe />
+    </div>
+  );
 };
 
 export default Home;
