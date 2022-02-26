@@ -1,9 +1,10 @@
-import { ProjectsAndPortfolio } from '../components';
+import { Footer, ProjectsAndPortfolio } from '../components';
 
 const Portfolio = () => {
   return (
     <div>
       <ProjectsAndPortfolio />
+      <Footer />
     </div>
   );
 };

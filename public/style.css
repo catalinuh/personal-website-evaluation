@@ -568,7 +568,7 @@ li > a {
 * > a > .img-responsive {
   width: 5vw;
   height: 5vw;
-  margin: 5vw;
+  margin: 1vw;
 }
 
 .media-links {
@@ -613,6 +613,7 @@ li > a {
     grid-row: 3;
     grid-column: 1;
   }
+
   .home-footer {
     grid-row: 3;
     grid-column: 2;
