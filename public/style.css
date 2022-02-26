@@ -19,7 +19,6 @@ html {
   padding-right: 50px;
 }
 .primary-nav li {
-  text-decoration: none;
   display: inline-block;
   margin: 0px 20px;
   color: white;
@@ -27,7 +26,6 @@ html {
 }
 
 .primary-nav a {
-  text-decoration: none;
   color: white;
   padding-bottom: 5px;
   -webkit-transition: border 50ms linear;
@@ -106,17 +104,20 @@ html {
 .about-header h1 {
   font-family: 'Source Sans Pro', Arial, sans-serif;
   font-size: 34pt;
+  text-align: center;
 }
 
 .about-header-quote {
   font-family: 'Slabo', Helvetica, serif;
   font-style: italic;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .about-general-description,
 .about-statistic-description {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 .about-general-description h2,
@@ -244,7 +245,7 @@ html {
 }
 .contact {
   background-color: #3a3a3a;
-  padding: 50px 150px;
+  padding: 50px 20%;
   color: white;
 }
 .contact input,
@@ -289,7 +290,6 @@ textarea {
 .footer {
   background-color: black;
   color: white;
-  padding: 50px 0;
   font-family: 'Roboto', Helvetica, serif;
 }
 
@@ -297,12 +297,7 @@ textarea {
 .footer h4 {
   font-family: 'Source Sans Pro', Arial, sans-serif;
 }
-.facebook,
-.linkedin,
-.pinterest,
-.email-icon {
-  padding: 31%;
-}
+
 .footer img {
   background-color: #8a8a8a;
   -webkit-transition: all 200ms ease-out;
@@ -340,74 +335,301 @@ textarea {
 .contact-footer a:hover {
 } */
 
-#project-row {
+/* Header */
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+}
+
+.logo {
+  margin-right: auto;
+  padding-left: 10px;
+}
+
+.primary-nav {
+  align-self: flex-end;
+}
+
+li > a {
+  text-decoration: none;
+}
+
+/* Hero */
+.banner-buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 10px;
+}
+
+.btn.hero {
+  width: 20%;
+  margin: 20px;
+}
+
+@media (max-width: 700px) {
+  .banner-buttons {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .btn.hero {
+    width: 90%;
+    margin: 20px;
+  }
+}
+
+/* About Me */
+.about#about {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.about-option-buttons {
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .about-option-buttons {
+    width: 100%;
+  }
+}
+
+/* Summary */
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+}
+
+.summary > * {
+  padding: 20px;
+}
+
+.summary > * > * {
+  margin: 0 auto;
+}
+
+/* For a larger screen */
+@media (min-width: 600px) {
+  .summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10%;
+  }
+
+  .summary > * {
+    display: grid;
+    grid-template-columns: auto 80%;
+  }
+
+  .summary > * > * > img {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+
+/* Projects and Portfolio */
+.projects {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.projects-header,
+.projects-header-quote {
+  text-align: center;
+}
+
+.projects-list {
   display: flex;
   flex-flow: row wrap;
 }
 
-#project-row.row {
+.luvtalk-project,
+.personal-website-project,
+.strike-zone-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  margin: 10px;
+  min-height: 375px;
+  padding: 20px;
+}
+
+.luvtalk-project > p,
+.personal-website-project > p,
+.strike-zone-project > p {
+  padding: 0px;
+}
+
+.btn.more {
+  margin-bottom: 0px;
+}
+
+@media (max-width: 700px) {
+  .luvtalk-project,
+  .personal-website-project,
+  .strike-zone-project {
+    width: 100%;
+    min-height: 0px;
+  }
+}
+
+/* Contact */
+.contact#contact {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
   align-items: center;
 }
 
-img.img-responsive {
-  width: 26px;
+.contact-form-body {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .contact#contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5%;
+  }
+
+  .contact-header {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    margin: 0 auto;
+  }
+
+  .contact-header-quote {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    margin: 0 auto;
+  }
+
+  .contact-instructions {
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  .contact-form-body > form {
+    grid-row: 3;
+    grid-column: 2;
+    width: 100%;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .firstname {
+    grid-row: 1;
+    grid-column: 1;
+    padding-right: 20px;
+  }
+
+  .lastname {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .email {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+  }
+
+  .message {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+  }
+
+  .submit-contact {
+    grid-row: 4;
+    grid-column: 1 / span 2;
+  }
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 10%;
+  padding-top: 0px;
+  padding-bottom: 25px;
+}
+
+* > a > .img-responsive {
+  width: 5vw;
+  height: 5vw;
+  margin: 5vw;
 }
 
 .media-links {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.container-fluid {
-  width: 100%;
-}
-
-.col-sm-4.col-md-4.col-sm-offset-4.col-md-offset-4 {
-  margin: 0 auto;
-}
-
-ul {
-  display: flex;
   flex-flow: row wrap;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
 }
 
-li {
-  text-decoration: none;
+.personal-contact > * {
+  text-align: center;
 }
 
-/* .btn.btn-default.btn-border {
-  margin: 0 auto;
-} */
+.company-information > * {
+  text-align: center;
+}
 
-@media (max-width: 800px) {
-  #project-row {
-    display: flex;
-    flex-flow: column wrap;
+@media (min-width: 700px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 33% repeat(4, 1fr);
   }
 
-  .contact-form-body {
-    display: flex;
-    flex-flow: column wrap;
+  .media-links {
+    grid-row: 1;
+    grid-column: 1 / span 5;
   }
 
-  div.col-sm-4 {
-    width: 100%;
+  .personal-contact {
+    grid-row: 2;
+    grid-column: 1 / span 5;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .personal-contact > * {
     padding: 20px;
   }
 
-  .btn.btn-default.btn-border {
-    width: 100%;
+  .company-information {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .home-footer {
+    grid-row: 3;
+    grid-column: 2;
   }
 
-  img.img-responsive {
-    width: 200px;
+  .portfolio-footer {
+    grid-row: 3;
+    grid-column: 3;
   }
-}
 
-.summary.container-fluid {
-  display: flex;
-  flex-flow: row wrap;
+  .resume-footer {
+    grid-row: 3;
+    grid-column: 4;
+  }
+
+  .contact-footer {
+    grid-row: 3;
+    grid-column: 5;
+  }
 }

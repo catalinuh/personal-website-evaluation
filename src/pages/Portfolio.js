@@ -1,9 +1,9 @@
-import { ProjectsAndPortfolios } from '../components';
+import { ProjectsAndPortfolio } from '../components';
 
 const Portfolio = () => {
   return (
     <div>
-      <ProjectsAndPortfolios />
+      <ProjectsAndPortfolio />
     </div>
   );
 };
