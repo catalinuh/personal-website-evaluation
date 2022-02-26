@@ -43,12 +43,14 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="personal-contact phone">
-        <h4>Phone: XXXXXX</h4>
-      </div>
+      <div className="personal-contact">
+        <div className="phone">
+          <h4>Phone: XXXXXX</h4>
+        </div>
 
-      <div className="personal-contact email-personal-contact">
-        <h4>Email: XXXXX@gmail.com</h4>
+        <div className="email-personal-contact">
+          <h4>Email: XXXXX@gmail.com</h4>
+        </div>
       </div>
 
       <div className="company-information">

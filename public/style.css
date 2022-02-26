@@ -243,7 +243,7 @@ html {
 }
 .contact {
   background-color: #3a3a3a;
-  padding: 50px 150px;
+  padding: 50px 20%;
   color: white;
 }
 .contact input,
@@ -288,7 +288,6 @@ textarea {
 .footer {
   background-color: black;
   color: white;
-  padding: 50px 0;
   font-family: 'Roboto', Helvetica, serif;
 }
 
@@ -296,12 +295,7 @@ textarea {
 .footer h4 {
   font-family: 'Source Sans Pro', Arial, sans-serif;
 }
-.facebook,
-.linkedin,
-.pinterest,
-.email-icon {
-  padding: 31%;
-}
+
 .footer img {
   background-color: #8a8a8a;
   -webkit-transition: all 200ms ease-out;
@@ -355,11 +349,37 @@ textarea {
   align-self: flex-end;
 }
 
-a {
+li > a {
   text-decoration: none;
 }
 
 /* Hero */
+.banner-buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 10px;
+}
+
+.btn.hero {
+  width: 20%;
+  margin: 20px;
+}
+
+@media (max-width: 700px) {
+  .banner-buttons {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .btn.hero {
+    width: 90%;
+    margin: 20px;
+  }
+}
 
 /* About Me */
 .about#about {
@@ -382,9 +402,221 @@ a {
 /* Summary */
 
 .summary {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+}
+
+.summary > * {
+  padding: 20px;
+}
+
+.summary > * > * {
+  margin: 0 auto;
+}
+
+/* For a larger screen */
+@media (min-width: 600px) {
+  .summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10%;
+  }
+
+  .summary > * {
+    display: grid;
+    grid-template-columns: auto 80%;
+  }
+
+  .summary > * > * > img {
+    width: 5vw;
+    height: 5vw;
+  }
 }
 
 /* Projects and Portfolio */
+.projects {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.projects-header,
+.projects-header-quote {
+  text-align: center;
+}
+
+.projects-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.luvtalk-project,
+.personal-website-project,
+.strike-zone-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  margin: 10px;
+  min-height: 375px;
+  padding: 20px;
+}
+
+.luvtalk-project > p,
+.personal-website-project > p,
+.strike-zone-project > p {
+  padding: 0px;
+}
+
+.btn.more {
+  margin-bottom: 0px;
+}
+
+@media (max-width: 700px) {
+  .luvtalk-project,
+  .personal-website-project,
+  .strike-zone-project {
+    width: 100%;
+    min-height: 0px;
+  }
+}
+
+/* Contact */
+.contact#contact {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form-body {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .contact#contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5%;
+  }
+
+  .contact-header {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    margin: 0 auto;
+  }
+
+  .contact-header-quote {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    margin: 0 auto;
+  }
+
+  .contact-instructions {
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  .contact-form-body > form {
+    grid-row: 3;
+    grid-column: 2;
+    width: 100%;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .firstname {
+    grid-row: 1;
+    grid-column: 1;
+    padding-right: 20px;
+  }
+
+  .lastname {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .email {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+  }
+
+  .message {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+  }
+
+  .submit-contact {
+    grid-row: 4;
+    grid-column: 1 / span 2;
+  }
+}
+
+/* Footer */
+.footer {
+  padding: 10%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+* > a > .img-responsive {
+  width: 5vw;
+  height: 5vw;
+  margin: 5vw;
+}
+
+.media-links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 700px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 33% repeat(4, 1fr);
+  }
+
+  .media-links {
+    grid-row: 1;
+    grid-column: 1 / span 5;
+  }
+
+  .personal-contact {
+    grid-row: 2;
+    grid-column: 1 / span 5;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .personal-contact > * {
+    padding: 20px;
+  }
+
+  .company-information {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .home-footer {
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  .portfolio-footer {
+    grid-row: 3;
+    grid-column: 3;
+  }
+
+  .resume-footer {
+    grid-row: 3;
+    grid-column: 4;
+  }
+
+  .contact-footer {
+    grid-row: 3;
+    grid-column: 5;
+  }
+}

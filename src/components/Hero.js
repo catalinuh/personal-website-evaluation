@@ -10,11 +10,11 @@ const Hero = () => {
       </div>
 
       <div className="banner-buttons">
-        <a className="btn btn-default btn-border" href="#about">
+        <a className="btn btn-default btn-border hero" href="#about">
           Info
         </a>
 
-        <a className="btn btn-default btn-border" href="#projects">
+        <a className="btn btn-default btn-border hero" href="#projects">
           Portfolio
         </a>
       </div>
