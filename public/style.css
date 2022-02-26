@@ -104,12 +104,14 @@ html {
 .about-header h1 {
   font-family: 'Source Sans Pro', Arial, sans-serif;
   font-size: 34pt;
+  text-align: center;
 }
 
 .about-header-quote {
   font-family: 'Slabo', Helvetica, serif;
   font-style: italic;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .about-general-description,
@@ -555,9 +557,12 @@ li > a {
 
 /* Footer */
 .footer {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
   padding: 10%;
   padding-top: 0px;
-  padding-bottom: 0px;
+  padding-bottom: 25px;
 }
 
 * > a > .img-responsive {
@@ -571,6 +576,14 @@ li > a {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+}
+
+.personal-contact > * {
+  text-align: center;
+}
+
+.company-information > * {
+  text-align: center;
 }
 
 @media (min-width: 700px) {
