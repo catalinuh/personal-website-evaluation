@@ -1,23 +1,26 @@
-// Action
+// Actions
 const SEND_MESSAGE = 'SEND_MESSAGE';
+const GET_MESSAGES = 'GET_MESSAGES';
 
-// Action Creator
+// Action Creators
 export const sendMessage = (message) => ({
   type: SEND_MESSAGE,
-  payload: message,
+  message,
+});
+export const getMessages = (messages) => ({
+  type: GET_MESSAGES,
+  messages,
 });
 
-export const submitNewMessage = () => async (dispatch) => {
-  const response = 'You sent a message!';
-
-  dispatch(sendMessage(response));
-};
+const initialState = [];
 
 // Reducer
-export default function messageReducer(state = [], action) {
+export default function messageReducer(state = initialState, action) {
   switch (action.type) {
     case SEND_MESSAGE:
-      return action.message;
+      return [...state, action.message];
+    case GET_MESSAGES:
+      return action.messages.messages;
     default:
       return state;
   }
